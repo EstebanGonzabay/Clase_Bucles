@@ -55,10 +55,54 @@ public class MetodosControlVariables {
 
 //      CONTROL DE MAYUSCULAS Y FORMATO DE NOMBRE
 
-        String nombre = "          esTeban     ";
+        String nombre = "   eSTeBan   ";
 
+// Eliminar espacios
+        nombre = nombre.trim();
 
+// Convertir todo a minúsculas
+        nombre = nombre.toLowerCase();
 
+// Convertir primera letra a mayúscula
+        String nombreFormateado =
+                Character.toUpperCase(nombre.charAt(0))
+                        + nombre.substring(1);
+
+        System.out.println(nombreFormateado);  // Esteban
+
+//        VALIDACION NUMERICA
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese su edad: ");
+
+        while (!sc.hasNextInt()) {
+            System.out.println("Error: ingrese un número entero.");
+            sc.next(); // Limpiar entrada incorrecta
+        }
+
+        int edad = sc.nextInt();
+        System.out.println("Edad registrada: " + edad);
+
+//       FORMATO DE NUMEROS
+
+        double precio = 12.34567;
+        String precioFormateado = String.format("%.2f", precio);
+
+        System.out.println("Precio final: $" + precioFormateado);
+
+//        VALIDACION DE STRING VACIO
+
+        String texto = "";
+
+        if (texto.isEmpty()) {
+            System.out.println("El texto está vacío");
+        }
+
+//        ACCESO A CARACTERES ESPECIFICOS
+
+        String palabra = "Java";
+        char primeraLetra = palabra.charAt(0);
+
+        System.out.println("Primera letra: " + primeraLetra);
 
 
 

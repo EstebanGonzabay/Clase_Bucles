@@ -9,9 +9,9 @@ public class Main {
         int limite = scanner.nextInt();
         scanner.nextLine(); // limpiar buffer
 
-        double totalIVA = 0;
-        double totalIMC = 0;
-        double totalVentas = 0;
+        float totalIVA = 0;
+        float totalIMC = 0;
+        float totalVentas = 0;
         int contadorProductos = 0;
 
         while (contadorProductos < limite) {
